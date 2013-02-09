@@ -1,0 +1,12 @@
+{
+  "type" : "record",
+  "name" : "Simple2",
+  "namespace": "com.namespace",
+  "doc" : "This is a record with only simple fields.",
+  "fields" : [{
+    "name" : "s",
+    "type" : "boolean",
+    "doc" : "Required field"
+  } ],
+  "version" : 1
+}

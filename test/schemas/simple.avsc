@@ -1,0 +1,25 @@
+{
+  "type" : "record",
+  "name" : "Simple",
+  "namespace": "com.namespace",
+  "doc" : "This is a record with only simple fields.",
+  "fields" : [{
+    "name" : "req1",
+    "type" : "string",
+    "doc" : "Required field 1"
+  }, {
+    "name" : "opt1",
+    "type" : [ "string", "null" ],
+    "doc" : "Optional Field 1"
+  }, {
+    "name" : "opt2",
+    "type" : "boolean",
+    "default" : false,
+    "doc" : "Optional field 2"
+  }, {
+    "name" : "opt3",
+    "type" : [ "long", "null" ],
+    "doc" : "Optional field 3"
+  } ],
+  "version" : 1
+}

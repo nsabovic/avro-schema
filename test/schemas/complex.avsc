@@ -1,0 +1,21 @@
+{
+  "type" : "record",
+  "name" : "Complex",
+  "namespace": "com.namespace",
+  "doc" : "This is a record with only complex fields.",
+  "fields" : [{
+    "name" : "cmplx1",
+    "type" : "com.namespace.Simple",
+    "doc" : "Required field 1"
+  }, {
+    "name" : "optcmplx",
+    "type" : [ "com.namespace.Simple2", "null" ],
+    "doc" : "Optional Field 1"
+  }, {
+    "name" : "opt2",
+    "type" : [ "boolean", "null" ],
+    "default" : false,
+    "doc" : "Optional field 2"
+  }],
+  "version" : 1
+}
