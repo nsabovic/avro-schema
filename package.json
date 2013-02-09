@@ -1,6 +1,6 @@
 {
   "name": "avro-schema",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "AVRO schema utilities",
   "author": "Nebojsa Sabovic <nsabovic@gmail.com>",
   "keywords": [
