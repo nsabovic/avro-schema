@@ -79,7 +79,7 @@ describe('Schema Validation', function() {
       };
       assert(s.validate(o, 'com.namespace.Complex') === true);
     });
-    it('loads with addtional fields present', function() {
+    it('loads with additonal fields present', function() {
       var o = {
         "cmplx1": {
           "req1": "bla",
@@ -97,7 +97,19 @@ describe('Schema Validation', function() {
         },
         "opt2": false
       };
-      assert(s.validate(o, 'com.namespace.Simple') === false);
+      assert(s.validate(o, 'com.namespace.Complex') === false);
+    });
+    it('passes with composite type in a record other than record', function() {
+      var o = {
+        "cmplx1": {
+        "req1": "bla"
+      },
+      "opt3": [
+        { "s": true },
+        { "s": true }
+        ]
+      };
+      assert(s.validate(o, 'com.namespace.Complex') === false);
     });
     it('fails with type different for a field in nested record', function() {
       var o = {
