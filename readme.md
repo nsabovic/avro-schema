@@ -2,7 +2,8 @@
 
 Verify that JSON objects match schemas & encode them to AVRO binary.
 
-        var schema = new require('avro-schema').Schema();
+        var Schema = require('avro-schema').Schema;
+        var schema = new Schema();
         schema.load("myfile.avsc");
         // All types from myfile.avsc are available.
         schema.load("another.avsc");
