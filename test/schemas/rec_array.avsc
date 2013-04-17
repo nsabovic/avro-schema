@@ -1,0 +1,12 @@
+{
+  "type" : "record",
+  "name" : "WithArray",
+  "namespace": "com.namespace",
+  "doc" : "This is a record with only one array field.",
+  "fields" : [ {
+    "name" : "theone",
+    "type" : { "type": "array", "items": "string" },
+    "doc"  : "The one"
+  } ],
+  "version" : 1
+}

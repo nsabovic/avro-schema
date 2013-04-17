@@ -1,4 +1,3 @@
-/*global describe:false it:false beforeEach:false afterEach:false */
 "use strict";
 
 var assert = require('assert');
@@ -138,6 +137,16 @@ describe('Schema Validation', function() {
         "opt2": 123
       };
       assert(s.validate(o, 'com.namespace.Simple') === false);
+    });
+  });
+  describe('Record with one array', function() {
+    var s = new Schema();
+    loadFile(s, schema_path + 'rec_array.avsc');
+    it('loads', function() {
+      var o = {
+        "theone": ["s"]
+      };
+      assert(s.validate(o, 'com.namespace.WithArray') === true);
     });
   });
 });
