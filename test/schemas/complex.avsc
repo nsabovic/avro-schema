@@ -18,7 +18,7 @@
     "doc"     : "Optional field 2"
   }, {
     "name"    : "opt3",
-    "type"    : [ "array", "null" ],
+    "type"    : [ { "type": "array", "items": "int" }, "null" ],
     "items"   : "com.namespace.Simple2",
     "doc"     : "Optional field 3"
   } ],
