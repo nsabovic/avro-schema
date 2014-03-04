@@ -141,7 +141,7 @@ describe('Schema Validation', function() {
   });
   describe('Record with one array', function() {
     var s = new Schema();
-    loadFile(s, schema_path + 'rec_array.avsc');
+    loadFile(s, schema_path + 'recArray.avsc');
     it('loads', function() {
       var o = {
         "theone": ["s"]

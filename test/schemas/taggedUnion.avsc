@@ -1,0 +1,34 @@
+{
+  "type" : "record",
+  "name" : "Complex",
+  "namespace": "com.namespace",
+  "doc" : "This is a record with only complex fields.",
+  "taggedUnions": {
+    "unionField": {
+      "tagField": {
+        "value1": "com.namespace.Simple1",
+        "value2": "something else"
+      }
+    }
+  },
+  "fields" : [ {
+    "name"    : "cmplx1",
+    "type"    : "com.namespace.Simple",
+    "doc"     : "Required field 1"
+  }, {
+    "name"    : "optcmplx",
+    "type"    : [ "com.namespace.Simple2", "null" ],
+    "doc"     : "Optional Field 1"
+  }, {
+    "name"    : "opt2",
+    "type"    : [ "boolean", "null" ],
+    "default" : false,
+    "doc"     : "Optional field 2"
+  }, {
+    "name"    : "opt3",
+    "type"    : [ { "type": "array", "items": "int" }, "null" ],
+    "items"   : "com.namespace.Simple2",
+    "doc"     : "Optional field 3"
+  } ],
+  "version" : 1
+}
